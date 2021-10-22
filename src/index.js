@@ -1,4 +1,5 @@
-import Icon from './icon.jpg';
+import firstImgSrc from './firstImg.jpg';
+import secondImgSrc from './secondImg.jpg';
 import './style.css';
 const content = document.querySelector(".content");
 const title = document.createElement("h1");
@@ -6,24 +7,29 @@ const firstPara = document.createElement("p");
 const secondPara = document.createElement("p");
 const navHeader = document.createElement("div");
 const navList = document.createElement("ul");
-const homeButton = document.createElement("li");
-const homeButtonLink = document.createElement("a");
-const titleHeader = document.createElement("div");
+const homeButton = document.createElement("button");
 const imgHeader = document.createElement("div");
-const imgHeaderIcon = document.createElement("img");
-const menuButton = document.createElement("li");
-const contactButton = document.createElement("li");
+const menuButton = document.createElement("button");
+const contactButton = document.createElement("button");
 const testimonyContainer = document.createElement("div");
+const firstTestimony = document.createElement("div");
+const secondTestimony = document.createElement("div");
 const imgHeaderTitle = document.createElement("h2");
 const footer = document.createElement("div");
+const firstImg = document.createElement("img");
+const secondImg = document.createElement("img");
+const firstParaDiv = document.createElement("div");
+const secondParaDiv = document.createElement("div");
+const firstSpan = document.createElement("span");
+const secondSpan = document.createElement("span");
+const footerPara = document.createElement("p");
+
 
 homeButton.textContent = "HOME";
 menuButton.textContent = "MENU";
 contactButton.textContent = "CONTACT";
-content.appendChild(titleHeader);
-titleHeader.appendChild(title);
-homeButton.appendChild(homeButtonLink);
 content.appendChild(navHeader);
+navHeader.appendChild(title);
 navHeader.appendChild(navList);
 navList.appendChild(homeButton);
 navList.appendChild(menuButton);
@@ -31,23 +37,128 @@ navList.appendChild(contactButton);
 content.appendChild(imgHeader);
 content.appendChild(testimonyContainer);
 content.appendChild(footer);
-imgHeader.appendChild(imgHeaderIcon);
 imgHeader.appendChild(imgHeaderTitle);
-testimonyContainer.appendChild(firstPara);
-testimonyContainer.appendChild(secondPara);
+testimonyContainer.appendChild(firstTestimony);
+testimonyContainer.appendChild(secondTestimony);
+firstTestimony.appendChild(firstImg);
+firstTestimony.appendChild(firstParaDiv);
+firstParaDiv.appendChild(firstPara);
+firstParaDiv.append(firstSpan);
+secondTestimony.appendChild(secondImg);
+secondTestimony.appendChild(secondParaDiv);
+secondParaDiv.appendChild(secondPara);
+secondParaDiv.appendChild(secondSpan);
+footer.appendChild(footerPara);
 
-imgHeaderIcon.src = Icon;
-imgHeaderIcon.classList.add("imgHeaderIcon");
+
+firstImg.src = firstImgSrc;
+secondImg.src = secondImgSrc;
+
 content.classList.add("content");
 navList.classList.add("navList");
 navHeader.classList.add("navHeader");
-titleHeader.classList.add("titleHeader");
 imgHeader.classList.add("imgHeader");
 testimonyContainer.classList.add("testimonyContainer");
+firstTestimony.classList.add("firstTestimony");
+secondTestimony.classList.add("secondTestimony");
 imgHeaderTitle.classList.add("imgHeaderTitle");
 footer.classList.add("footer");
 
 title.textContent = "RESTAURANT";
 imgHeaderTitle.textContent = "Enjoy tasty food with a tasty view!";
-firstPara.textContent = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius non voluptatibus perspiciatis cum molestias iste molestiae fuga excepturi beatae, corporis aliquam nulla ea deserunt animi optio cumque consectetur, sapiente doloribus.";
-secondPara.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, obcaecati eos! Neque voluptatem suscipit nam! Sapiente, deleniti. Inventore repudiandae, minima sequi debitis, rem sit nostrum autem amet eaque ipsa alias.";
+firstPara.textContent = '"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius non voluptatibus perspiciatis cum molestias iste molestiae fuga excepturi beatae, corporis aliquam nulla ea deserunt animi optio cumque consectetur, sapiente doloribus."';
+secondPara.textContent = '"Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, obcaecati eos! Neque voluptatem suscipit nam! Sapiente, deleniti. Inventore repudiandae, minima sequi debitis, rem sit nostrum autem amet eaque ipsa alias."';
+firstSpan.textContent = "- Mark Twain";
+secondSpan.textContent = "- Albert Einstein";
+footerPara.textContent = " Copyright laurpop99 Ⓒ The Odin Project 2021"
+
+menuButton.addEventListener("click", clearPage);
+homeButton.addEventListener("click", createHomePage);
+
+function clearPage() {
+    document.querySelector(".content").textContent = "";
+    const button = document.createElement("button");
+    button.textContent = "HOME";
+    document.body.appendChild(button);
+    button.addEventListener("click", function(){
+        const homePage = createHomePage();
+        document.body.appendChild(homePage)
+    });
+}
+function createHomePage() {
+const content = document.querySelector(".content");
+const title = document.createElement("h1");
+const firstPara = document.createElement("p");
+const secondPara = document.createElement("p");
+const navHeader = document.createElement("div");
+const navList = document.createElement("ul");
+const homeButton = document.createElement("button");
+const imgHeader = document.createElement("div");
+const menuButton = document.createElement("button");
+const contactButton = document.createElement("button");
+const testimonyContainer = document.createElement("div");
+const firstTestimony = document.createElement("div");
+const secondTestimony = document.createElement("div");
+const imgHeaderTitle = document.createElement("h2");
+const footer = document.createElement("div");
+const firstImg = document.createElement("img");
+const secondImg = document.createElement("img");
+const firstParaDiv = document.createElement("div");
+const secondParaDiv = document.createElement("div");
+const firstSpan = document.createElement("span");
+const secondSpan = document.createElement("span");
+const footerPara = document.createElement("p");
+
+
+homeButton.textContent = "HOME";
+menuButton.textContent = "MENU";
+contactButton.textContent = "CONTACT";
+content.appendChild(navHeader);
+navHeader.appendChild(title);
+navHeader.appendChild(navList);
+navList.appendChild(homeButton);
+navList.appendChild(menuButton);
+navList.appendChild(contactButton);
+content.appendChild(imgHeader);
+content.appendChild(testimonyContainer);
+content.appendChild(footer);
+imgHeader.appendChild(imgHeaderTitle);
+testimonyContainer.appendChild(firstTestimony);
+testimonyContainer.appendChild(secondTestimony);
+firstTestimony.appendChild(firstImg);
+firstTestimony.appendChild(firstParaDiv);
+firstParaDiv.appendChild(firstPara);
+firstParaDiv.append(firstSpan);
+secondTestimony.appendChild(secondImg);
+secondTestimony.appendChild(secondParaDiv);
+secondParaDiv.appendChild(secondPara);
+secondParaDiv.appendChild(secondSpan);
+footer.appendChild(footerPara);
+
+
+firstImg.src = firstImgSrc;
+secondImg.src = secondImgSrc;
+
+content.classList.add("content");
+navList.classList.add("navList");
+navHeader.classList.add("navHeader");
+imgHeader.classList.add("imgHeader");
+testimonyContainer.classList.add("testimonyContainer");
+firstTestimony.classList.add("firstTestimony");
+secondTestimony.classList.add("secondTestimony");
+imgHeaderTitle.classList.add("imgHeaderTitle");
+footer.classList.add("footer");
+
+title.textContent = "RESTAURANT";
+imgHeaderTitle.textContent = "Enjoy tasty food with a tasty view!";
+firstPara.textContent = '"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius non voluptatibus perspiciatis cum molestias iste molestiae fuga excepturi beatae, corporis aliquam nulla ea deserunt animi optio cumque consectetur, sapiente doloribus."';
+secondPara.textContent = '"Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, obcaecati eos! Neque voluptatem suscipit nam! Sapiente, deleniti. Inventore repudiandae, minima sequi debitis, rem sit nostrum autem amet eaque ipsa alias."';
+firstSpan.textContent = "- Mark Twain";
+secondSpan.textContent = "- Albert Einstein";
+footerPara.textContent = " Copyright laurpop99 Ⓒ The Odin Project 2021"
+menuButton.addEventListener("click", clearPage);
+homeButton.addEventListener("click", createHomePage);
+
+return content;
+}
+    

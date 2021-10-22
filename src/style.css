@@ -26,21 +26,29 @@ body{
     gap: 32px;
     list-style: none;
 }
-.navHeader ul li {
+.navHeader ul button {
     font-size: 28px;
+    background-color: rgb(125, 180, 154);
+    border: none;
+    cursor: pointer;
 }
 
-
-.titleHeader {
-    background-color: rgb(86, 167, 126);
-    width: 100%;
-    text-align: center;
-    color:rgb(38, 77, 57);
+.navHeader ul button:hover {
+    scale: 1.1;
+    background-color: rgb(103, 158, 132);
+}
+.navHeader ul button:active {
+    scale: 0.95;
+    background-color: rgb(74, 122, 100);
 }
 
 .navHeader {
     width : 100%;
     background-color: rgb(125, 180, 154) ;
+    height: 12.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .imgHeader {
@@ -50,9 +58,55 @@ body{
     background-color: rgb(137, 105, 167);
     width: 100%;
     gap : 16px;
+    background: url("./icon.jpg");
+    background-position: 55% 70%;
+    background-repeat: no-repeat;
+    height: 25vh;
 }
 
 .imgHeader h2 {
     font-size: 36px;
-    color: rgb(2, 44, 85);
+    color: rgb(3, 27, 24);
+    background-color: rgba(3, 32, 39, 0.15);
+}
+
+.firstTestimony img, .secondTestimony img {
+    width: 300px;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+.testimonyContainer { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 56.25vh;
+}
+
+.firstTestimony, .secondTestimony {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.firstTestimony div, .secondTestimony div {
+    align-self: center;
+}
+
+.firstTestimony  span, .secondTestimony  span {
+    display: block;
+    text-align: right;
+}
+.firstTestimony  p, .secondTestimony  p {
+    font-style: italic;
+}
+
+.footer {
+    background-color: rgb(133, 226, 215);
+    width: 100%;
+    height: 6.25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
