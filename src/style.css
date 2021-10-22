@@ -8,12 +8,6 @@ body{
     padding: 0;
 }
 
-.imgHeaderIcon {
-    width: 400px;
-    border-radius: 18px;
-    margin: 25px;
-}
-
 .content {
     display: flex;
     flex-direction: column;
@@ -71,7 +65,7 @@ body{
 }
 
 .firstTestimony img, .secondTestimony img {
-    width: 300px;
+    width: 200px;
     margin: 20px;
     border-radius: 8px;
 }
@@ -82,6 +76,8 @@ body{
     justify-content: center;
     align-items: center;
     height: 56.25vh;
+    flex-wrap: wrap;
+
 }
 
 .firstTestimony, .secondTestimony {
@@ -109,4 +105,152 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+ 
+
+/* MENU  PAGE*/
+.menuNavHeader ul {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    list-style: none;
+}
+.menuNavHeader ul button {
+    font-size: 28px;
+    background-color: rgb(231, 159, 125) ;
+    border: none;
+    cursor: pointer;
+}
+
+.menuNavHeader ul button:hover {
+    scale: 1.1;
+    background-color: rgb(196, 128, 96) ;
+}
+.menuNavHeader ul button:active {
+    scale: 0.95;
+    background-color: rgb(145, 81, 52) ;
+}
+
+.menuNavHeader {
+    width : 100%;
+    background-color: rgb(231, 159, 125) ;
+    height: 12.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.menuImgHeader {
+    background: url('./menuBackground.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(137, 105, 167);
+    width: 100%;
+    background-position: 55% 70%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 25vh;
+    color: rgb(241, 202, 202);
+}
+
+.menuContainer img {
+    width: 250px;
+}
+
+.firstItem img, .secondItem img, .thirdItem img, .fourthItem img {
+    width: 300px;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+.menuContainer { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 56.25vh;
+    flex-wrap: wrap;
+
+}
+
+.firstItem, .secondItem, .thirdItem, .fourthItem {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.firstItem div, .secondItem div, .thirdItem div, .fourthItem div {
+    align-self: center;
+}
+
+/* CONTACT PAGE */
+.contactContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 56.25vh;
+    flex-wrap: wrap;
+}
+
+.contactNavHeader ul {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    list-style: none;
+}
+.contactNavHeader ul button {
+    font-size: 28px;
+    background-color: rgb(83, 144, 236) ;
+    border: none;
+    cursor: pointer;
+}
+
+.contactNavHeader ul button:hover {
+    scale: 1.1;
+    background-color: rgb(58, 108, 182) ;
+}
+.cotnactNavHeader ul button:active {
+    scale: 0.95;
+    background-color: rgb(30, 62, 110) ;
+}
+
+.contactNavHeader {
+    width : 100%;
+    background-color: rgb(83, 144, 236) ;
+    height: 12.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contactImgHeader {
+    background: url('./contact.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(137, 105, 167);
+    width: 100%;
+    background-position: 55% 70%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 25vh;
+    color: rgb(0, 60, 129);
+    font-size: 36px;
+}
+.addressItem img {
+    width: 900px;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+.addressItem{
+    display: flex;
+    justify-content: center;
+    width:100%;
+}
+
+.addressItem div {
+    align-self: center;
 }
